@@ -1,0 +1,31 @@
+.navbar {
+    background-color:#202124;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 13%;
+    list-style: none;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+}
+.navlinks {
+    text-decoration: none;
+    color: white;
+    width: 80px;
+    text-align: center;
+    justify-self: center;
+    padding: 8px;
+    font-size: larger;
+}
+.navlist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navlinks.sign {
+    border-radius: 12px;
+    background-color: rgba(255, 110, 15, .3);
+    border:solid 2.3px #ff6e0f;
+}
