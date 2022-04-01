@@ -18,7 +18,9 @@ function App() {
       {isLoaded && (
         <Switch>
           <Route path="/signup">
+            <div className="display">
             <SignupFormPage />
+            </div>
           </Route>
         </Switch>
       )}

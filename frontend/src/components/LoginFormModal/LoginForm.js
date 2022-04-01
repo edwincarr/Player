@@ -40,7 +40,7 @@ function LoginForm() {
           required
           placeholder="Password"
         />
-      <button type="submit">Log In</button>
+      <button type="submit">Login</button>
     </form>
   );
 }

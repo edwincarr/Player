@@ -1,11 +1,27 @@
 .signupPage {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    background-color: #232323;
+    gap: 200px;
+    width: 750px;
+    height: 470px;
+    border-radius: 20px;
 }
 .signupForm {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    align-items: center;
     gap: 5px;
+    align-self: center;
+}
+.signupinfo {
+    align-self: center;
+}
+.display {
+    display: flex;
+    height: 90vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
 }
