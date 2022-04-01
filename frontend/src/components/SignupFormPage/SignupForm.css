@@ -3,7 +3,6 @@
     flex-direction: row;
     justify-content: space-evenly;
     background-color: #252525;
-    gap: 200px;
     width: 750px;
     height: 470px;
     border-radius: 20px;
@@ -17,6 +16,7 @@
 }
 .signupinfo {
     align-self: center;
+
 }
 .display {
     display: flex;
@@ -41,10 +41,14 @@ input {
     color: #151515;
     transition: all 0.5s;
     font-size: large;
-    padding: 5px 10px;
+    width: 90px;
+    height: 36px;
 }
 .signupForm button:hover {
     background-color: #DB17E8;
     border:solid 1px #DB17E8;
-    font-size: 107%;
+    font-size: 110%;
+}
+.errors {
+    width: 300px;
 }
