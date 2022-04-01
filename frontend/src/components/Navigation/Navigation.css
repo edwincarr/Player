@@ -1,23 +1,25 @@
 .navbar {
-    background-color:#202124;
+    background-color:#151515;
     margin: auto;
     height: 50px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 15px 13%;
     list-style: none;
     gap: 20px;
     position: sticky;
     top: 0;
+    border-bottom: 1px solid #303030;
 }
 .navlinks {
     text-decoration: none;
-    color: white;
+    color: #606060;
     width: 80px;
     text-align: center;
     justify-self: center;
     padding: 8px;
     font-size: larger;
+    cursor: pointer;
 }
 .navlist{
     display: flex;
@@ -26,6 +28,16 @@
 }
 .navlinks.sign {
     border-radius: 12px;
-    background-color: rgba(255, 110, 15, .3);
-    border:solid 2.3px #ff6e0f;
+    background-color: #af0cff;
+    border:solid 2.3px #af0cff;
+    color: #151515;
+    transition: all 0.5s;
+}
+.navlinks.sign:hover {
+    background-color: #DB17E8;
+    border:solid 2.3px #DB17E8;
+    font-size: 110%;
+}
+.icon {
+    margin-left: -100px;
 }
