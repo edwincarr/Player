@@ -16,14 +16,16 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.18);
+    background-color: rgba(255, 255, 255, 0.10);
   }
 
   #modal-content {
     position: absolute;
-    background-color:white;
-    height: 600px;
-    width: 400px;
+    background-color:black;
+    color: white;
+    border-radius: 10px;
+    height: 560px;
+    width: 430px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,9 +35,34 @@
 .modalform {
     display: flex;
     flex-direction: column;
-    align-items:stretch;
+    align-items:center;
     gap: 20px;
 }
 .modalIcon {
     height: 200px;
+}
+.modalform input {
+  font-size: medium;
+  background-color: transparent;
+  border: 2px solid #303030;
+  border-radius: 5px;
+  color: white;
+}
+.modalform button {
+  font-family: 'roboto';
+  width: 20%;
+  background-color: #af0cff;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #af0cff;
+  font-size: medium;
+  align-self: flex-end;
+  color: #151515;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.modalform button:hover {
+  background-color: #DB17E8;
+  border:solid 1px #DB17E8;
+  font-size: 96%;
 }

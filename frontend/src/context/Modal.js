@@ -30,7 +30,7 @@ export function Modal({ onClose, children }) {
     <div id="modal">
       <div id="modal-background" onClick={onClose} />
       <div id="modal-content">
-          <img className='modalIcon' src={require('../files/outsideIcon.png') }/>
+          <img className='modalIcon' src={require('../files/insideIcon.png')} alt='icon'/>
         {children}
       </div>
     </div>,

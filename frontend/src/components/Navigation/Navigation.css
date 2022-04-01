@@ -1,12 +1,11 @@
 .navbar {
     background-color: #171717;
     margin: auto;
-    height: 50px;
+    height: 20px;
     display: flex;
     justify-content: space-between;
     padding: 15px 13%;
     list-style: none;
-    gap: 20px;
     position: sticky;
     top: 0;
     border-bottom: 1px solid #303030;
@@ -17,17 +16,18 @@
     width: 80px;
     text-align: center;
     justify-self: center;
-    padding: 8px;
-    font-size: larger;
+    padding: 3px;
+    font-size: medium;
     cursor: pointer;
 }
 .navlist{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 35px;
 }
 .navlinks.sign {
-    border-radius: 12px;
+    border-radius: 10px;
     background-color: #af0cff;
     border:solid 2.3px #af0cff;
     color: #151515;
@@ -36,7 +36,7 @@
 .navlinks.sign:hover {
     background-color: #DB17E8;
     border:solid 2.3px #DB17E8;
-    font-size: 110%;
+    font-size: 96%;
 }
 .icon {
     margin-left: -100px;
