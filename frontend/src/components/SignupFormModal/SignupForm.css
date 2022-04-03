@@ -48,7 +48,7 @@ input {
 .signupForm button:hover {
     background-color: #DB17E8;
     border:solid 1px #DB17E8;
-    font-size: 107%;
+    font-size: 110%;
 }
 .errors {
     width: 300px;

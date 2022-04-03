@@ -13,7 +13,7 @@
 .navlinks {
     text-decoration: none;
     color: #606060;
-    width: 80px;
+    width: 75px;
     text-align: center;
     justify-self: center;
     padding: 3px;
@@ -31,16 +31,20 @@
     gap: 35px;
 }
 .navlinks.sign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
     background-color: #af0cff;
     border:solid 2.3px #af0cff;
     color: #151515;
+    height: 25px;
     transition: all 0.5s;
 }
 .navlinks.sign:hover {
     background-color: #DB17E8;
     border:solid 2.3px #DB17E8;
-    font-size: 96%;
+    font-size: 97%;
 }
 .icon {
     margin-left: -100px;
