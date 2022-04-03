@@ -22,7 +22,7 @@ export function ModalProvider({ children }) {
   );
 }
 
-export function Modal({ onClose, children }) {
+export function LoginModal({ onClose, children }) {
   const modalNode = useContext(ModalContext);
   if (!modalNode) return null;
 
@@ -32,6 +32,21 @@ export function Modal({ onClose, children }) {
       <div id="modal-content">
         <h2>Login</h2>
           <img className='modalIcon' src={require('../files/insideIcon.png')} alt='icon'/>
+        {children}
+      </div>
+    </div>,
+    modalNode
+  );
+}
+
+export function SignupModal({ onClose, children }) {
+  const modalNode = useContext(ModalContext);
+  if (!modalNode) return null;
+
+  return ReactDOM.createPortal(
+    <div id='modal'>
+      <div id='modal-background' onClick={onClose} />
+      <div id='signup-content'>
         {children}
       </div>
     </div>,

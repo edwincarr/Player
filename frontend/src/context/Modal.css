@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: white;
   }
 
   #modal-background {
@@ -66,4 +66,7 @@
   background-color: #DB17E8;
   border:solid 1px #DB17E8;
   font-size: 96%;
+}
+#signup-content {
+  position: absolute;
 }
