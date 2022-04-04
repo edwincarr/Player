@@ -1,6 +1,7 @@
 import './index.css'
 
 const AudioPlayer = () => {
+    
     return (
         <div className="player">
             <audio controls>
