@@ -1,0 +1,15 @@
+.player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: fixed;
+    bottom: 0%;
+    background-color: #171717;
+    width: 100vw;
+}
+.controls {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
