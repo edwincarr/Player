@@ -5,6 +5,11 @@ const { User } = require('../../db/models');
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
 const queryRouter = require('./query.js')
+router.use('/session', sessionRouter);
+
+router.use('/users', usersRouter);
+
+router.use('/query', queryRouter);
 
 router.get('/set-token-cookie', asyncHandler(async (_req, res) => {
   const user = await User.findOne({
@@ -32,11 +37,6 @@ router.get(
   }
 );
 
-router.use('/session', sessionRouter);
-
-router.use('/users', usersRouter);
-
-router.use('/query', queryRouter)
 
 
 module.exports = router;

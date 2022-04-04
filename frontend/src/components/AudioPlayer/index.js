@@ -1,22 +1,13 @@
+import AudioPlayer from 'react-h5-audio-player'
+import 'react-h5-audio-player/lib/styles.css';
 import './index.css'
-import { useDispatch, useSelector } from 'react-redux'
-import { getSongs } from '../../store/query'
 
-const AudioPlayer = () => {
-    const dispatch = useDispatch()
-    const click = () => {
-        dispatch(getSongs())
-    }
-    const songsO = useSelector(state => state.query.songs)
-    console.log(songsO)
+const Audio = ({currentSong}) => {
     return (
         <div className="player">
-            <audio controls>
-                <source src={require('../../files/AllFallsDown.mp4')}/>
-            </audio>
-            <div onClick={click}>words be wording</div>
+            <AudioPlayer controls src={require('../../files/AllFallsDown.mp4')}/>
         </div>
     )
 }
 
-export default AudioPlayer
+export default Audio

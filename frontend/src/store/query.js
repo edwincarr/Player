@@ -1,8 +1,9 @@
-// import { csrfFetch } from './csrf'
+import { csrfFetch } from './csrf'
+
 
 const SONGS = '/query/songs'
 
-export const songs = (data) => {
+const songs = (data) => {
     return {
         type: SONGS,
         payload: data
@@ -10,7 +11,7 @@ export const songs = (data) => {
 }
 
 export const getSongs = () => async dispatch => {
-    const response = await fetch('/api/query/songs')
+    const response = await csrfFetch('/api/query/songs')
     const data = await response.json()
     dispatch(songs(data))
   };
