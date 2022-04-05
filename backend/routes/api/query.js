@@ -5,7 +5,7 @@ const db = require('../../db/models')
 router.get('/songs',
 asyncHandler(async(req,res) => {
     const songs = await db.Song.findAll({
-        include: 'Album'
+        include: 'User'
     })
     return res.json(songs)
 }))

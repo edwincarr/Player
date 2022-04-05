@@ -13,10 +13,6 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: { model: 'Users' }
       },
-      albumId: {
-        type: Sequelize.INTEGER,
-        references: { model: 'Albums' }
-      },
       title: {
         allowNull: false,
         type: Sequelize.STRING
@@ -25,6 +21,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING(2000),
         unique: true
+      },
+      imageUrl: {
+        allowNull: false,
+        type: Sequelize.STRING(2000)
       },
       createdAt: {
         allowNull: false,
