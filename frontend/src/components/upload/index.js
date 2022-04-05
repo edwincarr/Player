@@ -1,10 +1,11 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { Redirect } from "react-router-dom"
+import { Redirect, useHistory } from "react-router-dom"
 import { postSong } from "../../store/query"
 
 const Upload = () => {
     const dispatch = useDispatch()
+    const history = useHistory()
     const [title, setTitle] = useState('')
     const [url, setUrl ] = useState('')
     const [imageUrl, setImageUrl ] = useState('')
@@ -22,19 +23,17 @@ const Upload = () => {
         }
 
         const res = await dispatch(postSong(payload))
-
-        if(res.msg === 'success'){
-          
-        }else{
-          setErrors(res)
+        
+        if(res === 'success'){
+          history.push('/')
         }
+        setErrors(res)
     }
-
     if(sessionUser){
         return (
             <form className='uploadForm' onSubmit={onSubmit}>
             <ul className="errors">
-              {errors.map((error, idx) => <li key={idx}>{error}</li>)}
+              {errors && errors.map((error, idx) => <li key={idx}>{error}</li>)}
             </ul>
               <input
                 type="text"

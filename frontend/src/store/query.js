@@ -22,7 +22,8 @@ export const getSongs = () => async dispatch => {
       headers: { 'Content-Type': 'application/json'},
       body: JSON.stringify(payload)
     })
-    return response.json()
+    const data = await response.json()
+    return data
   }
 
   const initialState = { songs: [] };
