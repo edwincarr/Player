@@ -16,6 +16,14 @@ export const getSongs = () => async dispatch => {
     dispatch(songs(data))
   };
 
+  export const postSong = (payload) => async dispatch => {
+    const response = await csrfFetch('/api/query/songs', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json'},
+      body: JSON.stringify(payload)
+    })
+    return response.json()
+  }
 
   const initialState = { songs: [] };
 

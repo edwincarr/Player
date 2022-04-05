@@ -4,6 +4,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Main from "./components/main";
 import { Route, Switch } from "react-router-dom";
+import Upload from "./components/upload";
 
 function App() {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ function App() {
           <Main />
         </Route>
         <Route path='/upload'>
-          <h1>hello</h1>
+          <Upload />
         </Route>
       </Switch>
     </>
