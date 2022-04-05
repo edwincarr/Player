@@ -15,7 +15,7 @@ const Main =() => {
         <>
         {
         songs.map(song => {
-            return <img onClick={() => setCurrentSong(song.url)} src={song.imageUrl} key={song.id} height='300px'/>
+            return <img onClick={() => setCurrentSong(song.url)} src={song.imageUrl} key={song.id} height='150px'/>
         })}
             <Audio currentSong={currentSong}/>
         </>

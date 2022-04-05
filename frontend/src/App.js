@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Main from "./components/main";
+import { Route, Switch } from "react-router-dom";
 
 function App() {
   const dispatch = useDispatch();
@@ -13,7 +14,14 @@ function App() {
   return (
     <>
       <Navigation isLoaded={isLoaded} />
-      <Main />
+      <Switch>
+        <Route exact path='/'>
+          <Main />
+        </Route>
+        <Route path='/upload'>
+          <h1>hello</h1>
+        </Route>
+      </Switch>
     </>
   );
 }
