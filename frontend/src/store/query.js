@@ -37,6 +37,7 @@ export const getSongs = () => async dispatch => {
     return data
   }
 
+
   const initialState = { songs: [] };
 
 const queryReducer = (state = initialState, action) => {

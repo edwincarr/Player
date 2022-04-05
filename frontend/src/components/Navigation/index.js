@@ -5,7 +5,7 @@ import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import './Navigation.css';
 import SignupFormModal from '../SignupFormModal';
-import UploadButton from '../upload/UploadButton';
+import UploadButton from './UploadButton';
 
 function Navigation({ isLoaded }){
   const sessionUser = useSelector(state => state.session.user);

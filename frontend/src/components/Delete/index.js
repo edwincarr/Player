@@ -1,10 +1,8 @@
 import { useDispatch } from "react-redux"
-import { NavLink, useHistory } from "react-router-dom"
 import { delSong } from "../../store/query"
 
 const Delete = ({songId}) => {
     const dispatch = useDispatch()
-    const history = useHistory()
     const del = async(id) => {
         const payload = {
             id: id
