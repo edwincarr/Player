@@ -25,7 +25,7 @@ function Navigation({ isLoaded }){
 
   return (
     <ul className='navbar'>
-      <img className='icon' src={require('../../files/insideIcon.png')} alt='icon' height='85px'></img>
+      <img className='icon' src={require('../../files/insideIcon.png')} alt='icon' height='85px' />
       <li className='navlist'>
         <NavLink className='navlinks home' exact to="/">Home</NavLink>
         {isLoaded && sessionLinks}
