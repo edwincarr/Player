@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Redirect, useHistory } from "react-router-dom"
 import { postSong } from "../../store/query"
@@ -23,7 +23,7 @@ const Upload = () => {
         }
 
         const res = await dispatch(postSong(payload))
-        
+
         if(res === 'success'){
           history.push('/')
         }

@@ -26,6 +26,17 @@ export const getSongs = () => async dispatch => {
     return data
   }
 
+  export const delSong = (payload) => async dispatch => {
+    const response = await csrfFetch('/api/query/delete',{
+      method: 'DELETE',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload)
+    })
+    const data = await response.json()
+    dispatch(getSongs())
+    return data
+  }
+
   const initialState = { songs: [] };
 
 const queryReducer = (state = initialState, action) => {

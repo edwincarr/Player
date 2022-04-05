@@ -45,4 +45,13 @@ asyncHandler(async(req,res) => {
     }
 }))
 
+router.delete('/delete',
+requireAuth,
+asyncHandler(async(req,res) => {
+    const { id } = req.body
+    const song = await db.Song.findByPk(id)
+    song.destroy()
+    return res.json('success')
+}))
+
 module.exports = router
