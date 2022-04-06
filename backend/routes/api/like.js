@@ -15,10 +15,10 @@ asyncHandler( async(req, res) => {
 
     if (relation) {
       relation.destroy();
-      res.json("Unliked");
+      res.json("isLiked");
     } else {
       await db.Like.create(req.body);
-      res.json("Liked");
+      res.json("isNot");
     }
   }));
 

@@ -12,15 +12,17 @@ const SongPage = () => {
     const { songId } = useParams()
     const current = useSelector(state=> state.song.currentSong)
     const sessionUser = useSelector(state => state.session.user)
+    const isLiked = useSelector(state=>state.like.isLiked)
+    const [isLoaded, setIsLoaded] = useState(false);
     useEffect(async() => {
         dispatch(getSong(songId))
         const payload = {
             userId: sessionUser.id,
             songId: songId
         }
-        dispatch(isLikedFunc(payload))
+        dispatch(isLikedFunc(payload)).then(()=> setIsLoaded(true))
     },[dispatch])
-    const isLiked = useSelector(state=>state.like.isLiked)
+
     return (
         <>
             <h1>{current.title}</h1>
@@ -33,7 +35,7 @@ const SongPage = () => {
             :
                     null
                 }
-                <LikeButton isLiked={isLiked} id={current.id}/>
+                {isLoaded && <LikeButton isLiked={isLiked} id={current.id}/>}
         </>
 
     )
