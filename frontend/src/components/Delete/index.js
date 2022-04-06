@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
 import { useHistory } from "react-router-dom"
-import { delSong } from "../../store/query"
+import { delSong } from "../../store/song"
 
 const Delete = ({songId}) => {
     const dispatch = useDispatch()

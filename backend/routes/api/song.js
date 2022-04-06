@@ -4,7 +4,7 @@ const { check, validationResult} = require('express-validator');
 const { requireAuth } = require('../../utils/auth')
 const db = require('../../db/models');
 
-router.get('/songs',
+router.get('/',
 asyncHandler(async(req,res) => {
     const songs = await db.Song.findAll({
         include: 'User'
@@ -28,7 +28,7 @@ const isSongValid = [
         .isURL()
         .withMessage('Please provide an image link')
 ]
-router.post('/songs',
+router.post('/',
 requireAuth,
 isSongValid,
 asyncHandler(async(req,res) => {

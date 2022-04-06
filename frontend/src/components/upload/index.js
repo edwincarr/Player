@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Redirect, useHistory } from "react-router-dom"
-import { postSong } from "../../store/query"
+import { postSong } from "../../store/song"
 
 const Upload = () => {
     const dispatch = useDispatch()
@@ -11,7 +11,6 @@ const Upload = () => {
     const [imageUrl, setImageUrl ] = useState('')
     const [ errors, setErrors ] = useState([])
     const sessionUser = useSelector(state => state.session.user);
-
     const onSubmit = async(e) => {
         e.preventDefault()
 
@@ -24,8 +23,8 @@ const Upload = () => {
 
         const res = await dispatch(postSong(payload))
 
-        if(res === 'success'){
-          history.push('/')
+        if(res.id){
+
         }
         setErrors(res)
     }

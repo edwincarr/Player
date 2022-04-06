@@ -1,12 +1,12 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useHistory } from "react-router-dom"
-import { updateSong } from "../../store/query"
+import { updateSong } from "../../store/song"
 
 const UpdatePage = () => {
     const dispatch = useDispatch()
     const history = useHistory()
-    const current = useSelector(state => state.query.currentSong)
+    const current = useSelector(state => state.song.currentSong)
     const [title, setTitle] = useState(current.title)
     const [imageUrl, setImageUrl] = useState(current.imageUrl)
     const [errors, setErrors] = useState([])

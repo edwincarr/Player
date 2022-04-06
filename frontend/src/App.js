@@ -7,6 +7,7 @@ import { Route, Switch } from "react-router-dom";
 import Upload from "./components/upload";
 import SongPage from "./components/SongPage";
 import UpdatePage from "./components/Update/UpdatePage";
+import Audio from "./components/AudioPlayer";
 
 function App() {
   const dispatch = useDispatch();
@@ -35,6 +36,7 @@ function App() {
           <UpdatePage />
         </Route>
       </Switch>
+      <Audio />
     </>
   );
 }
