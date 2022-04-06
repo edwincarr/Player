@@ -51,6 +51,17 @@ export const getSongs = () => async dispatch => {
     return data
   }
 
+  export const updateSong = (payload) => async dispatch => {
+    const response = await csrfFetch(`/api/query/${payload.id}`,{
+      method: 'PUT',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload)
+    })
+    const data = await response.json()
+    return data
+  }
+
+
 
   const initialState = { songs: [], currentSong: {}};
 

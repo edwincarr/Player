@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { getSong } from '../../store/query'
 import Delete from '../Delete'
+import Update from '../Update'
 
 const SongPage = () => {
     const dispatch = useDispatch()
@@ -17,7 +18,11 @@ const SongPage = () => {
             <h1>{current.title}</h1>
             <img src={current.imageUrl}/>
             {current.userId === sessionUser.id?
-                    <Delete songId={current.id}/>:
+            <>
+                    <Delete songId={current.id}/>
+                    <Update songId={current.id}/>
+            </>
+            :
                     null
                 }
         </>

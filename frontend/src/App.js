@@ -6,6 +6,7 @@ import Main from "./components/main";
 import { Route, Switch } from "react-router-dom";
 import Upload from "./components/upload";
 import SongPage from "./components/SongPage";
+import UpdatePage from "./components/Update/UpdatePage";
 
 function App() {
   const dispatch = useDispatch();
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path='/songs/:songId'>
           <SongPage />
+        </Route>
+        <Route path='/update/:songId'>
+          <UpdatePage />
         </Route>
       </Switch>
     </>

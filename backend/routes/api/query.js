@@ -62,5 +62,33 @@ asyncHandler(async(req,res) => {
     })
     return res.json(song)
 }))
+const isUpdateValid = [
+    check('title')
+        .exists({ checkFalsy: true })
+        .notEmpty()
+        .withMessage('Please provide a title'),
+    check('imageUrl')
+        .exists({ checkFalsy: true})
+        .notEmpty()
+        .isURL()
+        .withMessage('Please provide an image link')
+]
+router.put('/:id',
+isUpdateValid,
+asyncHandler(async(req,res) => {
+    const { id, title, imageUrl } = req.body
+    const user = await db.Song.findByPk(id)
+    user.title = title
+    user.imageUrl = imageUrl
+    const validatorErrors = validationResult(req);
 
+    if(validatorErrors.isEmpty()){
+        await user.save()
+        return res.json('success')
+    }else{
+        const errors = validatorErrors.array().map(error => error.msg);
+        return res.json(errors)
+    }
+
+}))
 module.exports = router
