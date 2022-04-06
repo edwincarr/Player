@@ -8,9 +8,14 @@
     background-color: #171717;
     width: 100vw;
 }
-.controls {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
 
+.rhap_container {
+    background: #171717;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .rhap_main.rhap_horizontal-reverse {
+      width: 80vw;
+  }
