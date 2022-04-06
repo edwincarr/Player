@@ -2,12 +2,20 @@ import { csrfFetch } from './csrf'
 
 
 const SONGS = '/query/songs'
+const SONG = '/query/song'
 
 const songs = (data) => {
     return {
         type: SONGS,
         payload: data
     }
+}
+
+const song = (data) => {
+  return {
+    type: SONG,
+    payload: data
+  }
 }
 
 export const getSongs = () => async dispatch => {
@@ -33,12 +41,18 @@ export const getSongs = () => async dispatch => {
       body: JSON.stringify(payload)
     })
     const data = await response.json()
-    dispatch(getSongs())
+    return data
+  }
+
+  export const getSong = (payload) => async dispatch => {
+    const response = await csrfFetch(`/api/query/${payload}`)
+    const data = await response.json()
+    dispatch(song(data))
     return data
   }
 
 
-  const initialState = { songs: [] };
+  const initialState = { songs: [], currentSong: {}};
 
 const queryReducer = (state = initialState, action) => {
   let newState;
@@ -46,6 +60,10 @@ const queryReducer = (state = initialState, action) => {
     case SONGS:
         newState = {...state}
         newState.songs = action.payload
+        return newState
+    case SONG:
+        newState = {...state}
+        newState.currentSong = action.payload
         return newState
     default:
       return state;

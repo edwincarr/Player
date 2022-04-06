@@ -54,4 +54,13 @@ asyncHandler(async(req,res) => {
     return res.json('success')
 }))
 
+router.get('/:id',
+asyncHandler(async(req,res) => {
+    const songId = req.params.id
+    const song = await db.Song.findByPk(songId, {
+        include: 'User'
+    })
+    return res.json(song)
+}))
+
 module.exports = router
