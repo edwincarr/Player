@@ -24,9 +24,10 @@ const Upload = () => {
         const res = await dispatch(postSong(payload))
 
         if(res.id){
-
+          history.push(`/songs/${res.id}`)
+        }else{
+          setErrors(res)
         }
-        setErrors(res)
     }
     if(sessionUser){
         return (

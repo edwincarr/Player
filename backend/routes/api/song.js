@@ -37,8 +37,8 @@ asyncHandler(async(req,res) => {
     const validatorErrors = validationResult(req);
 
     if(validatorErrors.isEmpty()){
-        await song.save()
-        return res.json('success')
+        const saved = await song.save()
+        return res.json(saved)
     }else{
         const errors = validatorErrors.array().map(error => error.msg);
         return res.json(errors)
