@@ -8,12 +8,14 @@ import Upload from "./components/upload";
 import SongPage from "./components/SongPage";
 import UpdatePage from "./components/Update/UpdatePage";
 import Audio from "./components/AudioPlayer";
+import { getSongs } from "./store/song";
 
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
+    dispatch(getSongs())
   }, [dispatch]);
 
   return (

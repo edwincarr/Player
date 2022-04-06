@@ -1,14 +1,10 @@
-import {useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { getPlayingSong, getSongs } from "../../store/song"
+import { getPlayingSong} from "../../store/song"
 import { NavLink } from "react-router-dom"
 import LoginFormModal from '../LoginFormModal';
 
 const Main =() => {
     const dispatch = useDispatch()
-    useEffect(() => {
-        dispatch(getSongs())
-    }, [dispatch])
     const songs = useSelector(state => state.song.songs)
     const sessionUser = useSelector(state => state.session.user)
     const handleClick = async(id) => {
