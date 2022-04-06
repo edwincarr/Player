@@ -1,12 +1,9 @@
-import { NavLink, useParams } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 
-const Update = ({ songId}) => {
-    const update = async(id) => {
-        
-    }
+const Update = ({ songId }) => {
     return (
-        <NavLink to={`/update/${songId}`} onClick={() => update(songId)}>Update</NavLink>
+        <NavLink to={`/update/${songId}`} >Update</NavLink>
     )
 }
 export default Update
