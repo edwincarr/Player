@@ -16,7 +16,7 @@ const SongPage = () => {
     return (
         <>
             <h1>{current.title}</h1>
-            <img src={current.imageUrl}/>
+            <img src={current.imageUrl} onError={(e) => e.target.src=require('../../files/default.png')} height='400px'/>
             {current.userId === sessionUser.id?
             <>
                     <Delete songId={current.id}/>

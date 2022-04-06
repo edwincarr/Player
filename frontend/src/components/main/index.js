@@ -20,7 +20,7 @@ const Main =() => {
             return (
                 <div key={song.id} >
                     <img onClick={() => setCurrentSong(song.url)} src={song.imageUrl} onError={(e) => e.target.src=require('../../files/default.png')} height='150px' alt={song.title}/>
-                    {sessionUser? <NavLink to={`/songs/${song.id}`}>{song.title}</NavLink> : <LoginFormModal name={`${song.title}`}/>}
+                    {sessionUser? <NavLink to={`/songs/${song.id}`}>{song.title}</NavLink> : <LoginFormModal name={song.title}/>}
                 </div>
             )
         })}
