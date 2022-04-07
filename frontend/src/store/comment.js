@@ -31,6 +31,18 @@ export const postComment = (payload) => async dispatch => {
     }
 }
 
+export const deleteComment = (payload) => async dispatch => {
+    const response = await csrfFetch(`/api/comments/${payload.commentId}`,{
+        method: 'DELETE',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(payload)
+    })
+    const data = await response.json()
+    if(data === 'success'){
+        dispatch(getComments(payload.songId))
+    }
+}
+
 const initialState = {comments:{}}
 
 const commentReducer = (state = initialState, action) => {

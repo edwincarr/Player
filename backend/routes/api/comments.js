@@ -37,4 +37,17 @@ asyncHandler(async(req,res) => {
         return res.json(errors)
     }
 }))
+
+router.delete('/:id',
+asyncHandler(async(req,res) => {
+    const { commentId } = req.body
+    const comment =await db.Comment.findByPk(commentId)
+    if(comment){
+        comment.destroy()
+        res.json('success')
+    }else{
+        res.json('err')
+    }
+}))
+
 module.exports = router;

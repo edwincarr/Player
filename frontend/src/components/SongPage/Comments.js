@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 import { getComments, postComment } from "../../store/comment"
+import CommentDelete from "./commentDelete"
 import './comments.css'
 
 
@@ -40,7 +41,7 @@ const Comments = ({ user }) => {
                 <div className='comment' key={comment?.id}>
                     <h3 >{comment?.body}</h3>
                     <p>{comment?.User.username}</p>
-                    {user?.id === comment?.User.id? <><p>Delete</p><p>update</p></>:null}
+                    {user?.id === comment?.User.id? <><CommentDelete songId={songId} commentId={comment?.id}/></>:null}
                 </div>
             )
         })}
