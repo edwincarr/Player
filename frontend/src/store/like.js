@@ -9,6 +9,7 @@ const isLiked = (data) => {
     }
 }
 
+
 export const like = (payload) => async dispatch => {
     const response = await csrfFetch(`/api/like/new`,{
         method: 'POST',
@@ -34,7 +35,7 @@ export const like = (payload) => async dispatch => {
     return data
   }
 
-  const initialState = { isLiked:{}};
+  const initialState = { isLiked:{}, counter: 0};
 
   const LikeReducer = (state = initialState, action) => {
       let newState

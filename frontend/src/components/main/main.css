@@ -1,8 +1,8 @@
 .main {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin: 16% 16% 4% 16%;
+    gap: 20px;
+    margin: 4% 14% 4% 14%;
 }
 .song-block {
     display: flex;
@@ -18,11 +18,13 @@ box-shadow: 0 0 10px #aaa;
 }
 .song-block a {
     font-weight: bold;
+    width: 150px;
     text-decoration: none;
     color: #aaa;
 }
 .song-block p {
     margin: 0;
+    width: 150px;
     color: #808080;
     font-size: 15px;
     cursor:default;
@@ -38,4 +40,23 @@ box-shadow: 0 0 10px #aaa;
     cursor: pointer;
     color: #e70cf7;
     font-size: 18px;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#welcomeGradient {
+    height: 500px;
+    width: 80%;
+    margin: 0 16%;
+}
+.main .modal-container div{
+    text-align: unset;
+    font-weight: bold;
+    color: #aaa;
+    width: 145px;
+    margin: 0;
+    padding: 0;
 }
