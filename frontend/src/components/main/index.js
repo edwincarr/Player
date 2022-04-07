@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { getPlayingSong, getSongs} from "../../store/song"
+import { clearCurrent, getPlayingSong, getSongs} from "../../store/song"
 import { NavLink } from "react-router-dom"
 import LoginFormModal from '../LoginFormModal';
 import './main.css'
@@ -11,6 +11,7 @@ const Main =() => {
     const sessionUser = useSelector(state => state.session.user)
     useEffect(() => {
         dispatch(getSongs())
+        dispatch(clearCurrent())
     },[dispatch])
     const handleClick = async(id) => {
         dispatch(getPlayingSong(id))

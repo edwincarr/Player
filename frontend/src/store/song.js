@@ -4,6 +4,7 @@ import { csrfFetch } from './csrf'
 const SONGS = '/song/songs'
 const SONG = '/song/song'
 const PLAYING = '/song/playing'
+const CLEAR = '/song/clear'
 
 const songs = (data) => {
     return {
@@ -23,6 +24,12 @@ const playingSong = (data) => {
   return {
     type: PLAYING,
     payload: data
+  }
+}
+
+export const clearCurrent = () => {
+  return {
+    type: CLEAR
   }
 }
 
@@ -78,7 +85,6 @@ export const getSongs = () => async dispatch => {
   }
 
 
-
   const initialState = { songs: [], currentSong: {}, playingSong: {}};
 
 const songReducer = (state = initialState, action) => {
@@ -95,6 +101,10 @@ const songReducer = (state = initialState, action) => {
     case PLAYING:
       newState = {...state}
       newState.playingSong = action.payload
+      return newState
+    case CLEAR:
+      newState = {...state}
+      newState.currentSong = {}
       return newState
     default:
       return state;
