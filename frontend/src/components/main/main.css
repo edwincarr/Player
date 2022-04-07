@@ -1,0 +1,40 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 16%;
+}
+.song-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.song-block img {
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+.song-block img:hover {
+    height: 160px;
+    width: 160px
+}
+.song-block a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #aaa;
+}
+.song-block p {
+    margin: 0;
+    color: #808080;
+    font-size: 15px;
+    cursor:default;
+}
+.profileButton {
+    cursor: pointer;
+    color: #af0cff;
+    transition: all 0.3s;
+    margin-left: 30px;
+}
+.profileButton:hover {
+    cursor: pointer;
+    color: #e70cf7;
+}

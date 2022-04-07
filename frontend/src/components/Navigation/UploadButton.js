@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 const UploadButton = () => {
     return (
         <>
-            <NavLink to='/upload'>Upload</NavLink>
+            <NavLink className='navlinks upload' to='/upload'>Upload</NavLink>
         </>
     )
 }

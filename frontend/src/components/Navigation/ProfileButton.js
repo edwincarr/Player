@@ -23,16 +23,14 @@ function ProfileButton({ user }) {
     return () => document.removeEventListener("click", closeMenu);
   }, [showMenu]);
 
-  const logout = (e) => {
-    e.preventDefault();
+  const logout = () => {
     dispatch(sessionActions.logout());
   };
 
   return (
     <>
-      <button onClick={openMenu}>
-        <i className="fas fa-user-circle" />
-      </button>
+      <i className="fa-solid fa-user profileButton" onClick={openMenu} />
+
       {showMenu && (
         <ul className="profile-dropdown">
           <li>{user.username}</li>
