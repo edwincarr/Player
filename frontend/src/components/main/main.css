@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin: 0 16%;
+    margin: 16% 16% 4% 16%;
 }
 .song-block {
     display: flex;
@@ -33,8 +33,10 @@
     color: #af0cff;
     transition: all 0.3s;
     margin-left: 30px;
+    padding: 10px;
 }
 .profileButton:hover {
     cursor: pointer;
     color: #e70cf7;
+    font-size: 18px;
 }
