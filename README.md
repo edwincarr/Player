@@ -68,7 +68,6 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
@@ -76,19 +75,42 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/edwincarr/solo-project
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
+3. Create a PSQL user with CREATEDB PASSWORD
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   CREATE USER <name> WITH CREATEDB PASSWORD <'password'>;
    ```
+   
+4. Create a .env file to access the backend based on the .env.example within the respective directory
+      - input desired information into .env
+
+
+5. Create Database, Migrate, and Seed models.
+   ```sh
+   npx dotenv sequelize db:create
+   npx dotenv sequelize db:migrate
+   npx dotenv sequelize db:seed:all
+   ```
+   
+6. Start the backend in the backend directory
+   ```sh
+   npm start
+   ```
+   
+8. Start the frontend in the frontend directory, this should open the project in your default browser. If not, navigate to http://localhost:3000
+   ```sh
+   npm start
+   ```
+   
+9. From here you can create and sign in as a user and begin using TBD NAME
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
