@@ -7,7 +7,7 @@
 <h3 align="center">TBD</h3>
 
   <p align="center">
-    Soundcloud like website
+    Soundcloud like website with a modern reskin
     <br />
     <a href="https://github.com/edwincarr/solo-project"><strong>Explore the docs »</strong></a>
     <br />
@@ -48,6 +48,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+![Screenshot 2022-04-07 174500](https://user-images.githubusercontent.com/69633370/162325160-f92f3c32-1873-459a-a87b-5ec40ac1df1d.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
