@@ -2,7 +2,7 @@
     background-color:black;
     color: white;
     border-radius: 10px;
-    height: 560px;
+    height: 580px;
     width: 430px;
     display: flex;
     align-items: center;
@@ -45,3 +45,4 @@
   border:solid 1px #DB17E8;
   font-size: 90%;
 }
+

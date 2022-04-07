@@ -50,8 +50,10 @@ requireAuth,
 asyncHandler(async(req,res) => {
     const { id } = req.body
     const song = await db.Song.findByPk(id)
-    song.destroy()
-    return res.json('success')
+    const data = await song.destroy()
+    if(data){
+        return res.json('success')
+    }
 }))
 
 router.get('/:id',

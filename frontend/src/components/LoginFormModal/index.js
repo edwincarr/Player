@@ -11,6 +11,7 @@ function LoginFormModal({ name }) {
       {showModal && (
         <LoginModal onClose={() => setShowModal(false)}>
           <LoginForm />
+          <p style={{'fontSize':'14px'}}>Not registered? Create an account</p>
         </LoginModal>
       )}
     </div>

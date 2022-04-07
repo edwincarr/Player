@@ -1,20 +1,24 @@
 import { useDispatch, useSelector } from "react-redux"
-import { getPlayingSong} from "../../store/song"
+import { getPlayingSong, getSongs} from "../../store/song"
 import { NavLink } from "react-router-dom"
 import LoginFormModal from '../LoginFormModal';
 import './main.css'
+import { useEffect } from "react";
 
 const Main =() => {
     const dispatch = useDispatch()
     const songs = useSelector(state => state.song.songs)
     const sessionUser = useSelector(state => state.session.user)
+    useEffect(() => {
+        dispatch(getSongs())
+    },[dispatch])
     const handleClick = async(id) => {
         dispatch(getPlayingSong(id))
     }
     return (
         <div className="body">
         <img src={require('../../files/gradient.jpg')} id='welcomeGradient'/>
-
+        <h1>Discover New Music...</h1>
         <div className='main'>
         {
             songs.map(song => {

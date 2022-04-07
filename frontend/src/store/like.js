@@ -9,7 +9,6 @@ const isLiked = (data) => {
     }
 }
 
-
 export const like = (payload) => async dispatch => {
     const response = await csrfFetch(`/api/like/new`,{
         method: 'POST',
