@@ -40,6 +40,7 @@ const Comments = ({ user }) => {
                 <div className='comment' key={comment?.id}>
                     <h3 >{comment?.body}</h3>
                     <p>{comment?.User.username}</p>
+                    {user?.id === comment?.User.id? <><p>Delete</p><p>update</p></>:null}
                 </div>
             )
         })}
