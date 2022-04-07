@@ -1,13 +1,12 @@
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {isLikedFunc, like } from '../../store/like'
-import './LikeButton.css'
+import { like } from '../../store/like'
 
 const LikeButton = ({isLiked, id}) => {
     const dispatch = useDispatch()
     const currentUser = useSelector(state => state.session.user)
-    const [style,setStyle] = useState(isLiked? {'color':'red'}:{'color': 'white'})
+    const [style,setStyle] = useState(isLiked? {'color':'#af0cff'}:{'color': 'white'})
 
     const handleClick = async(id) => {
         const payload = {
@@ -18,7 +17,7 @@ const LikeButton = ({isLiked, id}) => {
             if(data === 'isLiked'){
                 setStyle({'color':'white'})
             }else{
-                setStyle({'color':'red'})
+                setStyle({'color':'#af0cff'})
             }
     }
         return (
