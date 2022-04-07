@@ -8,6 +8,7 @@ import LikeButton from './LikeButton'
 import { isLikedFunc, likeCounter } from '../../store/like'
 import { getPlayingSong } from '../../store/song'
 import './SongPage.css'
+import Comments from './Comments'
 
 const SongPage = () => {
     const dispatch = useDispatch()
@@ -44,6 +45,7 @@ const SongPage = () => {
                     null
                 }
                 {isLoaded && <LikeButton isLiked={isLiked} id={current?.id}/>}
+                <Comments user={sessionUser}/>
         </div>
 
     )

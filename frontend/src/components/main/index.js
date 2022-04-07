@@ -17,7 +17,7 @@ const Main =() => {
     }
     return (
         <div className="body">
-        <img src={require('../../files/gradient.jpg')} id='welcomeGradient'/>
+        <img src={require('../../files/gradient.jpg')} id='welcomeGradient' alt="LOL"/>
         <h1>Discover New Music...</h1>
         <div className='main'>
         {
