@@ -68,7 +68,7 @@ box-shadow: 0 0 10px #aaa;
     color: #ffffff;
 }
 .body h1 {
-    font-family: 'Inter';
+    font-family: 'Inter', 'roboto', sans-serif;
     font-size: 100px;
     position: absolute;
     top: 0;

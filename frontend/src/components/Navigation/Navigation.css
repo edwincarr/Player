@@ -61,6 +61,7 @@
     background-color: #171717;
     padding: 25px;
     border-radius: 6px;
+    color: #606060;
 }
 .dropdown button {
     background-color: #af0cff;
@@ -71,8 +72,15 @@
     cursor: pointer;
     justify-self: flex-end;
     align-self: flex-end;
+    font-size: medium;
+    font-family: 'Inter', sans-serif;;
+    padding: 3px 9px;
 }
 .dropdown button:hover {
     background-color: #DB17E8;
     border:solid 2.3px #DB17E8;
+}
+.profile-dropdown > div {
+    padding: 5px;
+    font-size: large;
 }
