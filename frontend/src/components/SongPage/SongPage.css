@@ -25,10 +25,35 @@
     border:solid 2.3px #DB17E8;
 }
 
-img {
+.songpage img {
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
-img:hover {
+.songpage img:hover {
     box-shadow: 0 0 5px #aaa;
+}
+.songpage i{
+    cursor: pointer;
+}
+.ifOwned {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.ifOwned h3 {
+    color: rgb(153, 63, 63);
+    cursor: pointer;
+    transition: all .5s;
+}
+.ifOwned h3:hover {
+    color: rgb(202, 39, 39);
+}
+.ifOwned a {
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 1000;
+    transition: all .5s;
+}
+.ifOwned a:hover{
+    color: white;
 }
