@@ -38,6 +38,7 @@ box-shadow: 0 0 10px #aaa;
     color: #af0cff;
     transition: all 0.3s;
     padding: 5px;
+    font-size: larger;
 }
 .profileButton:hover {
     cursor: pointer;
