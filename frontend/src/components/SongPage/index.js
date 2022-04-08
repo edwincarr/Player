@@ -9,6 +9,7 @@ import { isLikedFunc, likeCounter } from '../../store/like'
 import { getPlayingSong } from '../../store/song'
 import './SongPage.css'
 import Comments from './Comments'
+import PostComment from './postComment'
 
 const SongPage = () => {
     const dispatch = useDispatch()
@@ -37,15 +38,18 @@ const SongPage = () => {
             <h1>{current.title}</h1>
             <img onClick={() => handleClick(current.id)} src={current.imageUrl} onError={(e) => e.target.src=require('../../files/default.png')} height='400px'/>
             {current?.userId === sessionUser?.id?
-            <>
+            <div className='ifOwned'>
                     <Delete songId={current?.id}/>
                     <Update songId={current?.id}/>
-            </>
+            </div>
             :
                     null
                 }
-                {isLoaded && <LikeButton isLiked={isLiked} id={current?.id}/>}
-                <Comments user={sessionUser}/>
+                <div className='interactions'>
+                    {isLoaded && <LikeButton isLiked={isLiked} id={current?.id}/>}
+                    <PostComment user={sessionUser} />
+                </div>
+                    <Comments user={sessionUser}/>
         </div>
 
     )

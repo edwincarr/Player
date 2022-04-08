@@ -4,3 +4,31 @@
     align-items: center;
     justify-content: center;
 }
+.interactions {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+.interactions button {
+    font-family: 'Inter', sans-serif;;
+    background-color: #af0cff;
+    border:solid 2.3px #af0cff;
+    border-radius: 5px;
+    height: 38px;
+    width: 70px;
+    font-size: large;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.interactions button:hover {
+    background-color: #DB17E8;
+    border:solid 2.3px #DB17E8;
+}
+
+img {
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+img:hover {
+    box-shadow: 0 0 5px #aaa;
+}

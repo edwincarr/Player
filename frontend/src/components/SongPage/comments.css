@@ -4,3 +4,18 @@
     gap: 10px;
     align-items: center;
 }
+.comment div {
+    color: rgb(153, 63, 63);
+    cursor: pointer;
+}
+.comment div:hover {
+    color: rgb(202, 39, 39);
+}
+.comment p {
+    font-size: small;
+    margin: 0;
+    padding: 10px 0;
+}
+.comment h3{
+    max-width: 400px;
+}
