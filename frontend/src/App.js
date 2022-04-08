@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Main from "./components/main";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import Upload from "./components/upload";
 import SongPage from "./components/SongPage";
 import UpdatePage from "./components/Update/UpdatePage";
@@ -35,6 +35,9 @@ function App() {
         </Route>
         <Route path='/update/:songId'>
           <UpdatePage />
+        </Route>
+        <Route>
+          <Redirect to='/'/>
         </Route>
       </Switch>
       <Audio />

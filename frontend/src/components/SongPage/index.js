@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { Redirect, useParams } from 'react-router-dom'
 import { getSong } from '../../store/song'
 import Delete from '../Delete'
 import Update from '../Update'
@@ -32,9 +32,10 @@ const SongPage = () => {
     const handleClick = async(id) => {
         dispatch(getPlayingSong(id))
     }
+    if(sessionUser){
 
-    return (
-        <div className='songpage'>
+        return (
+            <div className='songpage'>
             <h1>{current.title}</h1>
             <img onClick={() => handleClick(current.id)} src={current.imageUrl} onError={(e) => e.target.src=require('../../files/default.png')} height='400px'/>
             {current?.userId === sessionUser?.id?
@@ -52,7 +53,10 @@ const SongPage = () => {
                     <Comments user={sessionUser}/>
         </div>
 
-    )
+)
+}else {
+    return <Redirect to='/'/>
+}
 
 }
 export default SongPage
