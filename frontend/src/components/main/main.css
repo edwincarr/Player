@@ -37,13 +37,11 @@ box-shadow: 0 0 10px #aaa;
     cursor: pointer;
     color: #af0cff;
     transition: all 0.3s;
-    margin-left: 20px;
-    padding: 10px;
+    padding: 5px;
 }
 .profileButton:hover {
     cursor: pointer;
     color: #e70cf7;
-    font-size: 18px;
 }
 .body{
     display: flex;

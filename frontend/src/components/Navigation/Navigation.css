@@ -50,3 +50,29 @@
 .icon {
     margin-left: -100px;
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.profile-dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #171717;
+    padding: 25px;
+    border-radius: 6px;
+}
+.dropdown button {
+    background-color: #af0cff;
+    border:solid 2.3px #af0cff;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+.dropdown button:hover {
+    background-color: #DB17E8;
+    border:solid 2.3px #DB17E8;
+}
