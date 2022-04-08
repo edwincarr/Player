@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
     position: fixed;
     bottom: 0%;
     background-color: #171717;
@@ -14,8 +13,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    width: 70vw;
   }
   .rhap_main.rhap_horizontal-reverse {
       width: 80vw;
+
   }
+.player .songinfo {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
