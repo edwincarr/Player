@@ -7,6 +7,10 @@ const Audio = () => {
     const song = useSelector(state => state.song.playingSong)
     return (
         <div className="player">
+            <div className='songinfo'>
+                <img src={song.imageUrl} height='50px'/>
+                <p>{song.title}</p>
+            </div>
             <AudioPlayer customAdditionalControls={[]} layout="horizontal-reverse" src={song.url}/>
         </div>
     )
