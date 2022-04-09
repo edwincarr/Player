@@ -4,7 +4,7 @@
 <br />
 <div align="center">
 
-<h3 align="center">TBD</h3>
+<h3 align="center">Player</h3>
 
   <p align="center">
     Soundcloud like website with a modern reskin
