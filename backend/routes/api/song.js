@@ -15,8 +15,10 @@ asyncHandler(async(req,res) => {
 const isSongValid = [
     check('title')
         .exists({ checkFalsy: true })
+        .withMessage('Please provide a valid title')
         .notEmpty()
-        .withMessage('Please provide a title'),
+        .isLength({max:25})
+        .withMessage('Length must not exceed 25 characters'),
     check('url')
         .exists({ checkFalsy: true})
         .notEmpty()
