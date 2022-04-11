@@ -17,7 +17,7 @@ const Comments = ({ user }) => {
     },[dispatch])
 
     return (
-        <>
+        <div className="comment-container">
         {isLoaded && comments?.map(comment => {
             return (
                 <div className='comment' key={comment?.id}>
@@ -27,7 +27,7 @@ const Comments = ({ user }) => {
                 </div>
             )
         })}
-        </>
+        </div>
     )
 }
 export default Comments
