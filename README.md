@@ -12,7 +12,7 @@
     <a href="https://github.com/edwincarr/solo-project"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://edwincarr-react-project.herokuapp.com/">View Demo</a>
+    <a href="http://player-scc.herokuapp.com/">View Demo</a>
     ·
     <a href="https://github.com/edwincarr/solo-project/issues">Report Bug</a>
     ·
